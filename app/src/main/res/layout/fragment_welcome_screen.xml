@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WelcomeScreen">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryColor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/welcomePageTabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabIndicator="@android:color/transparent"
+            app:tabGravity="center"
+            app:tabSelectedTextColor="@color/primaryDarkColor"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Large"
+            app:tabTextColor="@color/grey_600"
+            app:tabMode="fixed"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/welcomePageViewPagers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/auth_confirm_button"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="67dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:background="@drawable/loginbuttonstyle">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/arrowIcon"
+            android:src="@drawable/arrow_next_icon"/>
+    </RelativeLayout>
+
+</RelativeLayout>

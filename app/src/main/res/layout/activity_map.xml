@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primaryColor"
+    tools:context=".MapActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapBoxMapInMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/locationSettingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp">
+
+            <FrameLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="40dp"
+                android:layout_height="110dp"
+                android:layout_gravity="start"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/source_icon"
+                    android:layout_gravity="top|center"
+                    android:contentDescription="@string/sourceIcon" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:src="@drawable/destination_icon"
+                    android:contentDescription="@string/destinationIcon" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:layout_marginStart="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/sourceTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/borderlayoutstyle"
+                        android:textColor="@color/black"
+                        android:singleLine="true"
+                        android:hint="@string/source_location"/>
+
+                    <ImageButton
+                        android:id="@+id/sourceEditButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/more_icon"
+                        android:background="@drawable/borderlayoutstyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/destinationTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:padding="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/borderlayoutstyle"
+                        android:singleLine="true"
+                        android:hint="@string/destination_location"/>
+
+                    <ImageButton
+                        android:id="@+id/destinationEditButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/more_icon"
+                        android:background="@drawable/borderlayoutstyle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bookingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|bottom"
+                android:text="@string/book_now"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/driverLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/saveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/saveData"
+                        android:textColor="@color/primaryColor"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pay_online"
+                        android:textColor="@color/primaryColor"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingBottom="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/borderlayoutstyle">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="start|center"
+                        android:id="@+id/driverPic"/>
+
+                    <TextView
+                        android:id="@+id/driverNameDescription"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/callButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:padding="20dp"
+                        android:src="@drawable/phone"
+                        android:contentDescription="@string/callIcon" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/supportborderstyle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:contentDescription="@string/carIcon"
+                        android:src="@drawable/car_icon"/>
+
+                    <TextView
+                        android:layout_gravity="start|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
+                        android:textColor="@color/black"
+                        android:text="@string/your_driver_s_current_status"/>
+
+                    <TextView
+                        android:id="@+id/driverStatus"
+                        android:layout_gravity="end|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryColor"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

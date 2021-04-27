@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomnavigator"
+    app:startDestination="@id/bookingWindow">
+
+    <fragment
+        android:id="@+id/bookingWindow"
+        android:name="production.logcat.ayeautocustomer.bottomnavigation.BookingWindow"
+        android:label="fragment_booking_window"
+        tools:layout="@layout/fragment_booking_window" >
+        <argument
+            android:name="villageName"
+            app:argType="string"
+            android:defaultValue="Select Your Location" />
+        <argument
+            android:name="locationLandMark"
+            app:argType="string"
+            android:defaultValue="your location landmark address will be display here" />
+        <action
+            android:id="@+id/action_bookingWindow_to_driversWindow2"
+            app:destination="@id/driversWindow2"
+            app:popUpTo="@id/driversWindow2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="production.logcat.ayeautocustomer.bottomnavigation.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/travelHistory"
+        android:name="production.logcat.ayeautocustomer.bottomnavigation.TravelHistory"
+        android:label="fragment_travel_history"
+        tools:layout="@layout/fragment_travel_history" />
+    <fragment
+        android:id="@+id/driversWindow2"
+        android:name="production.logcat.ayeautocustomer.bookingsubtabs.DriversWindow"
+        android:label="fragment_drivers_window"
+        tools:layout="@layout/fragment_drivers_window" >
+        <argument
+            android:name="standName"
+            app:argType="string"
+            android:defaultValue="no stand name" />
+        <argument
+            android:name="standLandMark"
+            app:argType="string"
+            android:defaultValue="no stand land mark" />
+        <argument
+            android:name="currentLatitude"
+            app:argType="string"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="currentLongitude"
+            app:argType="string"
+            android:defaultValue="0.0" />
+    </fragment>
+</navigation>

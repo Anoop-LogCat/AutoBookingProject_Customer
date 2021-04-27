@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startnavigator"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="production.logcat.ayeautocustomer.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_home2"
+            app:destination="@id/home2"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="production.logcat.ayeautocustomer.WelcomeScreen"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreen_to_verficationScreen"
+            app:destination="@id/verficationScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="production.logcat.ayeautocustomer.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/verficationScreen"
+        android:name="production.logcat.ayeautocustomer.VerificationScreen"
+        android:label="fragment_verfication_screen"
+        tools:layout="@layout/fragment_verfication_screen" >
+        <action
+            android:id="@+id/action_verficationScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen"
+            app:popUpTo="@id/welcomeScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_verficationScreen_to_home2"
+            app:destination="@id/home2"
+            app:popUpTo="@id/verficationScreen"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="authType"
+            app:argType="string"
+            android:defaultValue="NO_TYPE" />
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue="no user" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string"
+            android:defaultValue="no phone number" />
+        <argument
+            android:name="verificationCode"
+            app:argType="string"
+            android:defaultValue="no code" />
+    </fragment>
+</navigation>

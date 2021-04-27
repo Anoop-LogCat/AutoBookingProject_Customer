@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/primaryColor"
+    tools:context=".bottomnavigation.Profile">
+
+   <TextView
+       android:id="@+id/profileTitle"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+       android:gravity="center"
+       android:textStyle="bold"
+       android:paddingTop="15dp"
+       android:paddingBottom="20dp"
+       android:textColor="@color/white"
+       android:text="@string/profile"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/profileTitle"
+       android:layout_marginTop="50dp"
+       android:background="@drawable/profilelayoutbackground"
+       android:orientation="vertical">
+         <TextView
+             android:id="@+id/customerName"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/primaryDarkColor"
+             android:textSize="20sp"
+             android:layout_marginTop="60dp"
+             android:layout_gravity="center"
+             android:textStyle="bold"
+             app:drawableRightCompat="@drawable/edit_icon" />
+
+         <TextView
+             android:id="@+id/customerNumber"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textStyle="bold"
+             android:layout_gravity="center"
+             android:textSize="15sp" />
+
+       <FrameLayout
+           android:id="@+id/add_nominee_button"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@drawable/borderlayoutstyle"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:paddingLeft="10dp"
+           android:paddingRight="10dp"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:src="@drawable/add_nominee"
+               android:contentDescription="@string/nomineeIcon"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:textSize="17sp"
+               android:gravity="center"
+               android:textColor="@color/primaryDarkColor"
+               android:layout_marginLeft="40dp"
+               android:text="@string/add_nominee"
+               android:layout_marginStart="40dp" />
+
+           <ImageView
+               android:layout_width="15dp"
+               android:layout_height="match_parent"
+               android:layout_gravity="end"
+               android:gravity="center"
+               android:contentDescription="@string/arrowIcon"
+               android:src="@drawable/arrow"/>
+
+       </FrameLayout>
+
+       <FrameLayout
+           android:id="@+id/complains"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@drawable/borderlayoutstyle"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:paddingLeft="10dp"
+           android:paddingRight="10dp"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:src="@drawable/complainicon"
+               android:contentDescription="@string/logOutIcon"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:textSize="17sp"
+               android:gravity="center"
+               android:textColor="@color/primaryDarkColor"
+               android:layout_marginLeft="40dp"
+               android:text="@string/contact_us"
+               android:layout_marginStart="40dp" />
+
+           <ImageView
+               android:layout_width="15dp"
+               android:layout_height="match_parent"
+               android:layout_gravity="end"
+               android:gravity="center"
+               android:contentDescription="@string/arrowIcon"
+               android:src="@drawable/arrow"/>
+
+       </FrameLayout>
+
+       <FrameLayout
+           android:id="@+id/logOutButton"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="@drawable/borderlayoutstyle"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:paddingLeft="10dp"
+           android:paddingRight="10dp"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:src="@drawable/logoutbutton"
+               android:contentDescription="@string/logOutIcon"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:textSize="17sp"
+               android:gravity="center"
+               android:textColor="@color/primaryDarkColor"
+               android:layout_marginLeft="40dp"
+               android:text="@string/log_out"
+               android:layout_marginStart="40dp" />
+
+           <ImageView
+               android:layout_width="15dp"
+               android:layout_height="match_parent"
+               android:layout_gravity="end"
+               android:gravity="center"
+               android:contentDescription="@string/arrowIcon"
+               android:src="@drawable/arrow"/>
+
+       </FrameLayout>
+   </LinearLayout>
+
+   <RelativeLayout
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:layout_gravity="center"
+       android:layout_below="@+id/profileTitle"
+       android:layout_centerInParent="true"
+       android:padding="3dp">
+
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_width="95dp"
+          android:layout_height="95dp"
+          android:id="@+id/profile_image"/>
+
+      <com.wang.avi.AVLoadingIndicatorView
+          android:id="@+id/progress_changing"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_centerInParent="true"
+          style="@style/AVLoadingIndicatorView"
+          android:visibility="visible"
+          app:indicatorName="LineSpinFadeLoaderIndicator"
+          app:indicatorColor="@color/accentColor" />
+
+      <ImageView
+          android:id="@+id/changeProfilePicButton"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentEnd="true"
+          android:background="@drawable/authprofilebackground"
+          android:padding="6dp"
+          android:contentDescription="@string/cameraIcon"
+          android:src="@drawable/camera"/>
+
+   </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:textColor="@color/primaryDarkColor"
+            android:text="@string/from"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="17sp"
+            android:textColor="@color/grey_600"
+            android:text="@string/developer"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/privacy_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:text="@string/privacy"/>
+
+</RelativeLayout>

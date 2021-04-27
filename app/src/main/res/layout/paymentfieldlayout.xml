@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/alerticon"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/online_payment"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="Payment Details"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center|start"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/primaryDarkColor"
+                android:text="Fare Amount"/>
+
+            <EditText
+                android:id="@+id/amountEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:padding="15dp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittextstyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center|start"
+                android:textColor="@color/primaryDarkColor"
+                android:text="Payment Note"/>
+
+            <EditText
+                android:id="@+id/noteEditText"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:textSize="15sp"
+                android:padding="15dp"
+                android:background="@drawable/edittextstyle"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelPayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="cancel"
+                style="@style/Widget.MaterialComponents.Button"/>
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/okPayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Pay Now"
+                style="@style/Widget.MaterialComponents.Button"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

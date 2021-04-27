@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Taksowka</string>
+    <string name="terms_and_conditions">By creating an account you will accept our terms and conditions</string>
+    <string name="from">from</string>
+    <string name="developer">LOGCAT DEVELOPERS</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="source_location">Source Location</string>
+    <string name="destination_location">Destination Location</string>
+    <string name="book_now">Book Now</string>
+    <string name="pay_online">Pay Now</string>
+    <string name="your_driver_s_current_status">Your driver\'s current status</string>
+    <string name="nominee_name">nominee name</string>
+    <string name="nominee_number">nominee number</string>
+    <string name="no_auto_stand_available">No Auto Stand Available</string>
+    <string name="welcome_back">Welcome Back,</string>
+    <string name="enter_your_information_below_and_login">Enter your information below and login.</string>
+    <string name="phone_number">phone number</string>
+    <string name="profile">Profile</string>
+    <string name="hello">Hello</string>
+    <string name="traveller">Traveller,</string>
+    <string name="enter_your_information_below_and_sign_up">Enter your information below and sign Up.</string>
+    <string name="log_out">Log Out</string>
+    <string name="near_by_stands">Near By Stands</string>
+    <string name="add_nominee">Add Nominee</string>
+    <string name="user_name">user name</string>
+    <string name="travel_history">Travel History</string>
+    <string name="no_travel_history">No Travel History</string>
+    <string name="verify_your_phone_number">Verify Your Phone Number</string>
+    <string name="enter_your_otp_code_here">Enter your OTP code here</string>
+    <string name="verify_account">Verify Account</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="privacy">Privacy Policies</string>
+
+    <!-- Image Descriptions -->
+
+    <string name="sourceIcon">sourceIcon</string>
+    <string name="destinationIcon">destinationIcon</string>
+    <string name="callIcon">callIcon</string>
+    <string name="carIcon">carIcon</string>
+    <string name="arrowIcon">arrowIcon</string>
+    <string name="driverProfile">driverProfileIcon</string>
+    <string name="warningIcon">warningIcon</string>
+    <string name="cameraIcon">cameraIcon</string>
+    <string name="logOutIcon">logOutIcon</string>
+    <string name="nomineeIcon">nomineeIcon</string>
+    <string name="verifyicon">verifyIcon</string>
+    <string name="destinationicon">destinationIcon</string>
+    <string name="autoicon">autoIcon</string>
+    <string name="alerticon">alertIcon</string>
+    <string name="closeicon">closeIcon</string>
+    <string name="saveData">save</string>
+    <string name="driverDescription">is on the way to pick you please wait…</string>
+    <string name="driverNotYet">Driver Location is not shared yet…</string>
+
+    <string name="trivandrum">Trivandrum</string>
+    <string name="kollam">Kollam</string>
+    <string name="alappuzha">Alappuzha</string>
+    <string name="pathanamthitta">Pathanamthitta</string>
+    <string name="ernakulam">Ernakulam</string>
+    <string name="thrissur">Thrissur</string>
+    <string name="palakkad">Palakkad</string>
+    <string name="malappuram">Malappuram</string>
+    <string name="wayanadu">Wayanadu</string>
+    <string name="kasaragod">Kasaragod</string>
+    <string name="kottayam">Kottayam</string>
+    <string name="idukki">Idukki</string>
+    <string name="kozhikode">Kozhikode</string>
+    <string name="kannur">Kannur</string>
+
+    <string name="MAP_BOX_API_KEY">sk.eyJ1IjoibG9nY2F0MjAyMCIsImEiOiJja2gxeWhvamMwOWw4MzBsc2huaTNzeHRwIn0.P5nQbouX_frnt5w-l58MPg</string>
+    <string name="notification_channel_default">auto_customer_notification</string>
+    <string name="DESTINATION_ICON_ID">DESTINATION_ICON_ID</string>
+    <string name="SOURCE_ICON_ID">SOURCE_ICON_ID</string>
+    <string name="DRIVER_ICON_ID">DRIVER_ICON_ID</string>
+    <string name="stand_drivers">Stand Drivers</string>
+    <string name="no_hired_driver_s_available">No Hired Driver\'s Available</string>
+
+</resources>
